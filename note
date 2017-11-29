@@ -1,0 +1,47 @@
+1.install JDK8
+
+2.install maven.
+
+3.install python enviroment.
+download installer from Ananconda home:
+https://www.continuum.io/downloads 
+
+4. run the installer using command line:
+bash Anaconda3-4.3.0-Linux-x86_64.sh 
+
+5. install python web parser lib.
+pip install pandas-datareader
+
+6.check out the newest version code.
+
+
+7.change the current directory to project home.
+cd $PRO_HOME
+
+8.compile the code.
+mvn install
+
+
+9.run the python downloader.
+cd python-script
+python split_symbol.py
+python downloader.py
+
+10. return $PRO_HOME
+cd $PRO_HOME
+
+11.run the jar file.
+java -jar target/spring-goldenwise-stockpicker-1.0.0-SNAPSHOT.jar
+
+note (all path below are relative the $PRO_HOME):
+1. all config input location(including database config and signals mapping):
+\src\main\resources\application.properties
+
+2.all data from Yahoo api location:
+\data\histData
+
+3.stock universe file location(split_symbol.py would referene this file name, so keep the same filename):
+\data\Stock_Universe.csv
+
+4.all python scripts location:
+\python-script
